@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+
+{%  block body %}
+<div class="container my-5">
+    <h1>Listas </h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">modelo</th>
+                <th scope="col">color</th>
+                <th scope="col">placa</th>
+                <th scope="col">motor</th>
+                <th scope="col">marca</th>
+                <th scope="col">tipoVehiculo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in object_list  %}
+            <tr>
+                <th scope="row">{{i.id}}</th>
+                <td>{{i.modelo}}</td>
+                <td>{{i.color}}</td>
+                <td>{{i.placa}}</td>
+                <td>{{i.motor}}</td>
+                <td>{{i.marca}}</td>
+                <td>{{i.tipoVehiculo}}</td>
+            </tr>
+            {% empty %}
+            <h1>No hay datos para mostrar</h1>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+
+{%  endblock %}

@@ -1,0 +1,19 @@
+.grid-main {
+    display: grid;
+    grid-template-areas: "g-nav g-nav g-nav g-nav g-nav"
+        "g-main g-main g-main g-main g-main"
+        "g-footer g-footer g-footer g-footer g-footer";
+    grid-template-rows: 0.5fr 5.4fr 0.5fr;
+}
+
+.g-footer {
+    grid-area: g-footer;
+}
+
+.g-nav {
+    grid-area: g-nav;
+}
+
+.g-main {
+    grid-area: g-main;
+}
